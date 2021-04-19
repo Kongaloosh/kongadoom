@@ -8,17 +8,36 @@
   ;;:recipe (:host github :repo "org/org-roam" :branch "master")
   )
 (package! org-journal)
-
+(package! org-download)
+;; (package! org-download-clipboard)
 (package! org-roam-bibtex)
 
 ;; When using org-roam via the `+roam` flag
 (unpin! org-roam company-org-roam)
 
 ;; When using bibtex-completion via the `biblio` module
-(unpin! bibtex-completion helm-bibtex ivy-bibtex)
+;;(unpin! bibtex-completion helm-bibtex ivy-bibtex)
+;;  :recipe (:host github :repo "org-roam/org-roam-bibtex"))
+
+;; When using org-roam via the `+roam` flag
+;;(unpin! org-roam company-org-roam)
+
+;; When using bibtex-completion via the `biblio` module
+;;(unpin! bibtex-completion helm-bibtex ivy-bibtex)
+
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
+
+;; If you installed via MELPA
+;;(require 'org-roam-bibtex)
+;;(add-hook 'after-init-hook #'org-roam-bibtex-mode)
+
+;; If you cloned the repository
+;;(add-to-list 'load-path "~/org/org-roam-bibtex/") ;Modify with your own path
+;;(require 'org-roam-bibtex)
+;;(add-hook 'after-init-hook #'org-roam-bibtex-mode)
+
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
